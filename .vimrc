@@ -6,7 +6,6 @@ set hlsearch
 set number
 set numberwidth=5
 set foldcolumn=2
-set columns=87
 
 set sw=2
 set sts=2
