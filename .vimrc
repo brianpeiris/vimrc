@@ -26,4 +26,4 @@ set winaltkeys=yes
 set directory=$TEMP//,.
 
 " Don't mark stdin input as modified. Allows for an error-free :q
-au StdinReadPost * :setnomodified
+au StdinReadPost * :set nomodified
