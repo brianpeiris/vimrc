@@ -15,15 +15,25 @@ set autoindent
 
 set backspace=indent,eol,start
 
+set ignorecase
+set smartcase
+
 set visualbell
 
-set guifont=Consolas:h8
+if has("gui_running")
+    if has("gui_gtk2")
+	:set guifont=Ubuntu\ Mono\ 12
+    elseif has("gui_win32")
+	:set guifont=Consolas:h8
+    endif
+endif
+
 
 " Alt+Space menu goodness
 set winaltkeys=yes
 
 " Shoo-away pesky swp files
-set directory=$TEMP//,.
+set directory=$TEMP//,~/tmp//.
 
 " Don't mark stdin input as modified. Allows for an error-free :q
 au StdinReadPost * :set nomodified
