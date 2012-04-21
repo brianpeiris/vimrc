@@ -38,3 +38,7 @@ set directory=$TEMP//,~/.tmp//.
 
 " Don't mark stdin input as modified. Allows for an error-free :q
 au StdinReadPost * :set nomodified
+
+" Auto save and load manual folds
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
