@@ -40,5 +40,5 @@ set directory=$TEMP//,~/.tmp//.
 au StdinReadPost * :set nomodified
 
 " Auto save and load manual folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
