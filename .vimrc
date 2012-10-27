@@ -8,11 +8,11 @@ set numberwidth=5
 set foldcolumn=2
 set ruler
 
-set sw=2
-set sts=2
-set ts=2
+set sw=4
+set sts=4
+set ts=4
 set autoindent
-set et
+set expandtab
 
 set backspace=indent,eol,start
 
@@ -38,6 +38,12 @@ set directory=$TEMP//,~/.tmp//.
 
 " Don't mark stdin input as modified. Allows for an error-free :q
 au StdinReadPost * :set nomodified
+
+if has("win32")
+    set viewdir=~/_vim/view
+else
+    set viewdir=~/.vim/view
+endif
 
 " Auto save and load manual folds
 au BufWinLeave ?* mkview
