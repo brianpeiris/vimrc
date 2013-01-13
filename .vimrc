@@ -23,9 +23,9 @@ set visualbell
 
 if has("gui_running")
     if has("gui_gtk2")
-	:set guifont=Ubuntu\ Mono\ 12
+    :set guifont=Ubuntu\ Mono\ 12
     elseif has("gui_win32")
-	:set guifont=Consolas:h8
+    :set guifont=Consolas:h8
     endif
 endif
 
@@ -46,5 +46,5 @@ else
 endif
 
 " Auto save and load manual folds
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+au BufWinLeave *.* mkview
+au BufWinEnter *.* silent loadview
