@@ -26,17 +26,18 @@ if has("gui_running")
     endif
 endif
 
-
 " Alt+Space menu goodness
 set winaltkeys=yes
 
 " Shoo-away pesky swp files
 set directory=$TEMP//,~/.tmp//.
 
+" https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" https://github.com/scrooloose/syntastic
 let g:syntastic_check_on_open=1
 set statusline=%f\ %m\ %#warningmsg#\ %{SyntasticStatuslineFlag()}\ %*\ %l/%L-%c%V
 set laststatus=2
